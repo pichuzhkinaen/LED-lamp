@@ -2,7 +2,7 @@ body {
     background: url(../img/background.png) center (center / cover) no-repeat;
     background-attachment: scroll;
 }
-//задан размер секции 1250px, padding(top, bottom) = 0, padding-right = 50% от экрана - 50% от ширины контента, padding-left = 50% от экрана - 50% от ширины контента,
+//задан размер секции 1250px, padding-top(bottom) = 0, padding-right(left) = 50% от экрана - 50% от ширины контента
 header, section {
     padding: 0 calc(50% - 625px);
 }
@@ -20,25 +20,31 @@ header, section {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        &_link {
+        &__link {
             text-decoration: none;
             font-size: 18px;
             color: #616161;
+            &:hover {
+                color: #FB973B;
+            }
             &:active {
                 color: #FB973B;
             }
         }
     }
-    &_logo {
+    &__logo {
         width: 150px;
         height: 66px;
         margin-right: 40px;
     }
-    &_phone {
+    &__phone {
         font-size: 18px;
         color: #616161;
         font-weight: 700;
         margin-left: 40px;
+        &:hover {
+            color: #FB973B;
+        }
     }
 }
 
@@ -58,11 +64,11 @@ header, section {
             color:#FB973B;  
         }
     }
-    &_call {
+    .form {
         width: 392px;
         border: 2px solid #e6e6e6;
         margin-top: 33px;
-        &_phone {
+        &__phone {
             position: relative;
             color: #141419;
             width: 196px;
@@ -71,7 +77,7 @@ header, section {
             font-size: 20px;
             text-align: center;
         }
-        &_submit {
+        &__submit {
             position: absolute;
             width: 196px;
             height: 58px;
@@ -104,13 +110,36 @@ header, section {
         display: flex;
         justify-content: space-around;
         margin-top: 42px;
-        &_descr {
+        .descr {
             font-size: 18px;
             color: #141419;
-            &_img {
+            &__img {
                 width: 21px;
             }
         }
     }
-    
+}
+
+.partners {
+    display: flex;
+    justify-content: flex-start;
+    margin: 109px 0 70px 0;
+    .descr {
+        font-size: 24px;
+        color: #616161;
+        margin-top: 8px;
+        span {
+            color:#FB973B;  
+        }
+    }
+    &-content {
+        margin-right: 100px;
+        .title {
+            margin: 0;
+        }
+        &__img {
+            width: 200px;
+            margin: 25px 0 20px 0;
+        }
+    }
 }

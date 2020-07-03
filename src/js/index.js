@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    let form = document.querySelector('.feedback_call'),
-        phone = form.querySelector('.feedback_call_phone');
+    let form = document.querySelector('.form'),
+        phone = form.querySelector('.form__phone');
 
     let im = new Inputmask("+7 (999) 999-99-99");
     im.mask(phone);
